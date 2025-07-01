@@ -6,6 +6,8 @@ from bokeh.plotting import figure
 from bokeh.layouts import column, row
 from bokeh.palettes import Spectral4
 
+# Test 01, Test 02, Test 03, Test 04, Test 05, Test 06, Reto, Reto (Reto2)
+
 def cargar_json(path):
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -60,7 +62,7 @@ def preparar_datos_linea(ed1, ed2, codigo_a_nombre):
     codigos = set(ed1.keys()).union(set(ed2.keys()))
     nombres = [codigo_a_nombre.get(codigo, codigo) for codigo in codigos]
     valores_ed1 = [ed1.get(codigo, 0) for codigo in codigos]
-    valores_ed2 = [ed2.get(codigo, 0) for codigo in codigos]
+    # valores_ed2 = [ed2.get(codigo, 0) for codigo in codigos]
 
     return pd.DataFrame({
         "Video": nombres,
